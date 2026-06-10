@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VELORA — Luxury Fashion</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a class="nav-link" data-page="home">Home</a>
+      <a class="nav-link" data-page="shop">Shop</a>
+      <a class="nav-link" data-page="about">About</a>
+      <a class="nav-link" data-page="contact">Contact</a>
+    </div>
+    <div class="nav-logo">VELORA</div>
+    <div class="nav-right">
+      <button class="cart-btn" id="cartBtn">
+        <span>Bag</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a class="mobile-link" data-page="home">Home</a>
+    <a class="mobile-link" data-page="shop">Shop</a>
+    <a class="mobile-link" data-page="about">About</a>
+    <a class="mobile-link" data-page="contact">Contact</a>
+  </div>
+
+  <!-- ==================== HOME ==================== -->
+  <section class="page active" id="home">
+
+    <!-- HERO -->
+    <div class="hero">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600&h=900&fit=crop&q=85" alt="VELORA Hero" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-sub">SS 2026 Collection</p>
+        <h1 class="hero-title">Dressed<br/><em>in Shadow</em></h1>
+        <p class="hero-desc">Garments for those who move through the world with intention.</p>
+        <button class="btn-primary" onclick="showPage('shop')">Explore Collection</button>
+      </div>
+      <div class="hero-scroll">SCROLL</div>
+    </div>
+
+    <!-- FEATURED -->
+    <div class="featured-section">
+      <div class="section-label">Featured Pieces</div>
+      <div class="featured-grid">
+        <div class="featured-card" onclick="showPage('shop')">
+          <div class="featured-img-wrap">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&h=720&fit=crop&q=85"
+                 onerror="this.src='https://images.unsplash.com/photo-1551232864-3f0890e1777d?w=600&h=720&fit=crop&q=85'"
+                 alt="The Obsidian Coat" loading="lazy"/>
+            <div class="feat-overlay"></div>
+          </div>
+          <p class="feat-cat">Outerwear</p>
+          <p class="feat-name">The Obsidian Coat</p>
+        </div>
+        <div class="featured-card tall" onclick="showPage('shop')">
+          <div class="featured-img-wrap">
+            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=820&fit=crop&q=85"
+                 onerror="this.src='https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=600&h=820&fit=crop&q=85'"
+                 alt="Velvet Nocturne Gown" loading="lazy"/>
+            <div class="feat-overlay"></div>
+          </div>
+          <p class="feat-cat">Eveningwear</p>
+          <p class="feat-name">Velvet Nocturne Gown</p>
+        </div>
+        <div class="featured-card" onclick="showPage('shop')">
+          <div class="featured-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=720&fit=crop&q=85"
+                 onerror="this.src='https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&h=720&fit=crop&q=85'"
+                 alt="Charcoal Edge Suit" loading="lazy"/>
+            <div class="feat-overlay"></div>
+          </div>
+          <p class="feat-cat">Tailoring</p>
+          <p class="feat-name">Charcoal Edge Suit</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <span>VELORA &nbsp;·&nbsp; LUXURY FASHION &nbsp;·&nbsp; HANDCRAFTED &nbsp;·&nbsp; SS 2026 &nbsp;·&nbsp; VELORA &nbsp;·&nbsp; LUXURY FASHION &nbsp;·&nbsp; HANDCRAFTED &nbsp;·&nbsp; SS 2026 &nbsp;·&nbsp; VELORA &nbsp;·&nbsp; LUXURY FASHION &nbsp;·&nbsp; HANDCRAFTED &nbsp;·&nbsp; SS 2026 &nbsp;·&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- EDITORIAL -->
+    <div class="editorial-section">
+      <div class="editorial-text">
+        <div class="section-label">Philosophy</div>
+        <h2 class="editorial-title">Craft is<br/><em>Everything</em></h2>
+        <p class="editorial-body">Every stitch is an act of devotion. We source only the finest fabrics — built for those who understand that true luxury is felt, not seen.</p>
+        <button class="btn-ghost" onclick="showPage('about')">Our Story</button>
+      </div>
+      <div class="editorial-img-wrap">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=700&fit=crop&q=85"
+             onerror="this.src='https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800&h=700&fit=crop&q=85'"
+             alt="VELORA Editorial" loading="lazy"/>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==================== SHOP ==================== -->
+  <section class="page" id="shop">
+    <div class="page-header">
+      <p class="page-label">Collection</p>
+      <h2 class="page-title">SS 2026</h2>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="outerwear">Outerwear</button>
+      <button class="filter-btn" data-filter="tailoring">Tailoring</button>
+      <button class="filter-btn" data-filter="eveningwear">Eveningwear</button>
+      <button class="filter-btn" data-filter="accessories">Accessories</button>
+    </div>
+    <div class="shop-grid" id="shopGrid"></div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="page" id="about">
+    <div class="about-hero">
+      <img class="about-hero-img"
+           src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&h=700&fit=crop&q=85"
+           onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&h=700&fit=crop&q=85'"
+           alt="VELORA Atelier" loading="lazy"/>
+      <div class="about-hero-overlay"></div>
+      <div class="about-hero-content">
+        <p class="page-label">Est. 2009</p>
+        <h2 class="about-title">The House<br/>of <em>VELORA</em></h2>
+      </div>
+    </div>
+    <div class="about-body">
+      <div class="about-block">
+        <div class="section-label">Origin</div>
+        <p class="about-text">VELORA was born from the vision of a single designer who believed that darkness is not absence, but presence. That black is not empty, but full of everything unsaid.</p>
+      </div>
+      <div class="about-block">
+        <div class="section-label">Craftsmanship</div>
+        <p class="about-text">Each garment passes through the hands of over forty artisans before it is complete. We refuse to rush. We refuse to compromise. We refuse to be anything less than extraordinary.</p>
+      </div>
+      <div class="about-block">
+        <div class="section-label">Vision</div>
+        <p class="about-text">Fashion is not decoration. It is identity, power, and poetry. VELORA exists for those who understand this — and who dress accordingly.</p>
+      </div>
+    </div>
+    <div class="about-stats">
+      <div class="stat"><span class="stat-num">17</span><span class="stat-lbl">Years</span></div>
+      <div class="stat"><span class="stat-num">40+</span><span class="stat-lbl">Artisans</span></div>
+      <div class="stat"><span class="stat-num">12</span><span class="stat-lbl">Collections</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-lbl">Ateliers</span></div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="page" id="contact">
+    <div class="page-header">
+      <p class="page-label">Reach Us</p>
+      <h2 class="page-title">Contact</h2>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="contact-block">
+          <p class="contact-label">Flagship Atelier</p>
+          <p class="contact-val">Velora, Street 23, India</p>
+        </div>
+        <div class="contact-block">
+          <p class="contact-label">Email</p>
+          <p class="contact-val">velora@tweety.com</p>
+        </div>
+        <div class="contact-block">
+          <p class="contact-label">Phone</p>
+          <p class="contact-val">+91 84310 00000</p>
+        </div>
+        <div class="contact-block">
+          <p class="contact-label">Hours</p>
+          <p class="contact-val">Mon–Sat: 10:00 – 19:00</p>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" placeholder="How may we assist you?" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+        <p class="form-success" id="formSuccess">Your message has been received. We will be in touch.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Selection</h3>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn-primary full-w">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
